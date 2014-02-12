@@ -1,0 +1,75 @@
+<!-- index.html -->
+<!DOCTYPE html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html lang="en" ng-app="weeblyApp">
+<head>
+	<!-- META -->
+	<meta charset="utf-8">
+
+	<title>Weebly Frontend Project</title>
+
+	<!-- SCROLLS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/css/index.css">
+
+	<!-- SPELLS -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.5/angular.min.js"></script>
+
+	<script src="/public/js/app.js"></script>
+	<script src="/public/js/controllers.js"></script>
+
+	<!-- Page specific js. -->
+	<script src="/public/js/index.js"></script>
+
+	<!-- Relative routing for $locationProvider. -->
+	<base href="/">
+</head>
+
+<body>
+	<nav id="navbar" class="navbar navbar-default" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="#">Brand</a>
+		</div>
+	</nav>
+	<div class="sidebar">
+		<ul>
+			<li>
+				<div class="title">
+					Templates
+				</div>
+				<!-- PAGES -->
+				<ul>
+					<li>
+					<!-- NG-REPEAT for an Array. -->
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="title">
+					Elements
+				</div>
+				<!-- ELEMENTS -->
+				<ul>
+					<li>
+					<!-- Each is an object with different attributes. -->
+					</li>
+				</ul>
+			</li>
+			<li>
+				<div class="title">
+					Settings
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="main-content">
+		<div class="row">
+		<!-- NG-REPEAT on array of pages. -->
+		</div>
+
+	</div>
+</body>
+</html>
