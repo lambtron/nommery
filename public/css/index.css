@@ -62,6 +62,10 @@ ul > li.attendee-container > .attendee > img {
 
 }
 
+label {
+  padding-top: 6px;
+}
+
 /* GENERIC CSS CLASS DECLARATIONS */
 
 .rounded-corners-20 {
