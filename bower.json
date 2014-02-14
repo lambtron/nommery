@@ -4,6 +4,7 @@
   "main": "./server.js",
   "dependencies": {
     "jquery": "latest",
-    "angular": "1.2.5"
-	}
+    "angular": "1.2.5",
+    "angular-momentjs": "~0.1.7"
+  }
 }

@@ -21,7 +21,7 @@
 				</label>
 			</div>
 			<div class="form-group col-lg-4">
-				<input type="text" placeholder="{{eventObject.region}}" ng-model="eventObject.region" class="form-control">
+				<input type="text" placeholder="{{eventObject.region}}" ng-model="eventObject.region" class="form-control" ng-blur="queryYelp()">
 			</div>
 			<div class="col-md-2">
 				<label class="pull-right">
@@ -41,5 +41,13 @@
 				<input type="text" placeholder="{{eventObject.partyMax}}" ng-model="eventObject.partyMax" class="form-control">
 			</div>
 		</form>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="btn btn-primary pull-right" ng-click="createEvent()">
+				Add Event!
+			</div>
+		</div>
 	</div>
 </div>

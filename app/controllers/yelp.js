@@ -13,9 +13,6 @@ module.exports = {
 	getRestaurants: function getRestaurants (venueQuery, location, cb) {
 		yelp.search({term: venueQuery, category_filter: 'food,restaurants',
 			limit: 5, location: location}, function(error, data) {
-			// return an Array of the below objects:
-			// - image_url
-			// - id
 			var arr = [];
 			for (var i = 0; i < data.businesses.length; i++) {
 				var restObj = {};

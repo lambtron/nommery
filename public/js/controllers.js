@@ -37,29 +37,43 @@ nommeryApp.controller('viewController',
 }]);
 
 nommeryApp.controller('createController',
-	['$scope', '$http', '$routeParams', '$location',
-	function ($scope, $http, $routeParams, $location)
+	['$scope', '$http', '$routeParams', '$location', '$moment',
+	function ($scope, $http, $routeParams, $location, $moment)
 {
 	var eventObject = $scope.eventObject = {
 		title: 'State Bird Provisions',
 		region: 'San Francisco',
 		neighborhood: 'Western Addition',
-		datetime: Date.now,
+		datetime: $moment().format('h:mma, m/DD/YY'),
 		partyMax: 2,
 	};
 
-	var submitYelp = $scope.submitYelp = function () {
-		var obj = {
-			venueQuery: eventObject.title
-		};
-		console.log(obj);
-		$http.post('/api/yelp', obj)
+	var venues = $scope.venues = [];
+
+	var createEvent = $scope.createEvent = function createEvent () {
+		$http.post('/api/event', eventObject)
 		.success( function (data) {
-			console.log(data);
+			$location.path('/events/view');
 		})
 		.error( function (data) {
-			console.log('server error: ' + data);
+			console.log('Error: ' + data);
 		});
-	};
+	}
+
+	// var queryYelp = $scope.queryYelp = function () {
+	// 	var obj = {
+	// 		venueQuery: eventObject.title,
+	// 		location: eventObject.region
+	// 	};
+	// 	console.log(obj);
+	// 	$http.post('/api/yelp', obj)
+	// 	.success( function (data) {
+	// 		$scope.venues = data;
+	// 		console.log(data);
+	// 	})
+	// 	.error( function (data) {
+	// 		console.log('server error: ' + data);
+	// 	});
+	// };
 
 }]);

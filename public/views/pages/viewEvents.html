@@ -41,7 +41,7 @@
 				<ul class="attendees">
 					<li ng-repeat="attendee in event.attendees" class="attendee-container">
 						<div class="attendee">
-							<img src="http://i.imgur.com/JcwUkLdb.jpg" class="circle">
+							<img src="{{attendee.imgUrl}}" alt="{{attendee.altTxt}}" class="circle">
 						</div>
 					</li>
 				</ul>
@@ -49,16 +49,16 @@
 
 			<!-- Action button. -->
 			<div class="btn btn-primary action" style="position: absolute; right: 20px; bottom: 20px; z-index: 2">
-				<div ng-show="event.attendees.length + 1 < event.partyMax">
+				<div ng-show="event.attendees.length < event.partyMax">
 					RSVP
 				</div>
-				<div ng-hide="event.attendees.length + 1 < event.partyMax">
+				<div ng-hide="event.attendees.length < event.partyMax">
 					Join Waitlist
 				</div>
 			</div>
 
 			<!-- Grey out if event is full. -->
-			<div class="rounded-corners-20" ng-class="{gray: event.attendees.length + 1 >= event.partyMax}">
+			<div class="rounded-corners-20" ng-class="{gray: event.attendees.length >= event.partyMax}">
 			</div>
 
 			<!-- Clear both. -->

@@ -2,6 +2,14 @@
   width: 200px;
 }
 
+.info h4 {
+  margin-top: 0px;
+}
+
+.info p {
+  line-height: 1.3em;
+}
+
 ul {
   list-style: none;
   margin: 0px;
