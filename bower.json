@@ -1,0 +1,9 @@
+{
+  "name": "Nommery",
+  "version": "0.0.1",
+  "main": "./server.js",
+  "dependencies": {
+    "jquery": "latest",
+    "angular": "1.2.5"
+	}
+}

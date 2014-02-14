@@ -1,12 +1,12 @@
 {
-  "name": "Weebly Frontend Project",
-  "description": "Weebly Trial Week Frontend Project",
+  "name": "Nommery",
+  "description": "Nommery Frontend Project",
   "version": "0.0.1",
   "author": "Andy Jiang",
   "main": "server.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lambtron/weebly-frontend-project"
+    "url": "https://github.com/lambtron/nommery"
   },
   "engines": {
     "node": "0.10.22",

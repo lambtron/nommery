@@ -7,9 +7,10 @@
 var events = [
 		{
 			title: 'Dinner at State Bird Provisions',
+			region: 'San Francisco',
 			neighborhood: 'Western Addition',
 			datetime: Date.now,
-			partyMax: 12,
+			partyMax: 2,
 			attendees: [
 				{
 					name: '',
@@ -22,17 +23,22 @@ var events = [
 			],
 			pictures: [
 				{
-					imgUrl: '',
-					altTxt: ''
+					imgUrl: '/public/img/statebirdprovisions1.jpg',
+					altTxt: 'statebirdprovisions1'
 				},
 				{
-					imgUrl: '',
-					altTxt: ''
+					imgUrl: '/public/img/statebirdprovisions2.jpg',
+					altTxt: 'statebirdprovisions2'
+				},
+				{
+					imgUrl: '/public/img/statebirdprovisions3.jpg',
+					altTxt: 'statebirdprovisions3'
 				}
 			]
 		},
 		{
 			title: 'Brunch at Serpentine',
+			region: 'San Francisco',
 			neighborhood: 'Dogpatch',
 			datetime: Date.now,
 			partyMax: 4,
@@ -48,12 +54,16 @@ var events = [
 			],
 			pictures: [
 				{
-					imgUrl: '',
-					altTxt: ''
+					imgUrl: '/public/img/serpentine1.jpg',
+					altTxt: 'serpentine1'
 				},
 				{
-					imgUrl: '',
-					altTxt: ''
+					imgUrl: '/public/img/serpentine2.jpg',
+					altTxt: 'serpentine2'
+				},
+				{
+					imgUrl: '/public/img/serpentine3.jpg',
+					altTxt: 'serpentine3'
 				}
 			]
 		}

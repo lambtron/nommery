@@ -1,32 +1,100 @@
-#navbar {
-  margin-bottom: 0px;
+.filter {
+  width: 200px;
 }
 
-.sidebar {
-  height: 100%;
-  position: fixed;
-  width: 250px;
-}
-
-.sidebar > ul {
+ul {
   list-style: none;
   margin: 0px;
   padding: 0px;
 }
 
-.sidebar > ul > li {
-  background: red;
-  min-height: 100px;
+ul.events > li.event {
+  background: #F0F0F0;
+  min-height: 190px;
+  margin: 20px 0px;
+  padding: 20px 20px;
 }
 
-.sidebar > ul > li > .title {
-  background: gray;
-  text-align: center;
-  width: 100%;
+ul.events > li.event > .pictures {
+  float: left;
+  margin-right: 20px;
 }
 
-.main-content {
-  background: red;
-  margin-left: 250px;
+ul.events > li.event > .pictures > .thumb {
+  height: 150px;
+  overflow: hidden;
+  width: 150px;
+}
+
+ul.events > li.event > .pictures > .thumb > img {
+  width: 200px;
+}
+
+ul > li.attendee-container {
+  display: inline-block;
+  height: 50px;
+  margin: 4px;
+  width: 50px;
+}
+
+ul > li.attendee-container:first-child {
+  height: 60px;
+  margin-left: 0px;
+  width: 60px;
+}
+
+ul > li.attendee-container:last-child {
+  margin-right: 0px;
+}
+
+ul > li.attendee-container > .attendee {
+  height: 100%;
+  position: relative;
+}
+
+ul > li.attendee-container > .attendee > img {
+  height: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.event > .btn, .action {
+
+}
+
+/* GENERIC CSS CLASS DECLARATIONS */
+
+.rounded-corners-20 {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+
+.rounded-corners-10 {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.rounded-corners-5 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; 
+}
+
+.gray {
+  background: #000;
+  height: 100%;
+  left: 0px;
+  opacity: 0.2;
+  position: absolute; 
+  top: 0px;
   width: 100%;
+  z-index: 0;
 }
