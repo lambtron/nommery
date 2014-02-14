@@ -1,8 +1,8 @@
 'use strict';
 
-nommeryApp.controller('mainController',
-  ['$scope', '$http',
-	function ($scope, $http)
+nommeryApp.controller('viewController',
+  ['$scope', '$http', '$routeParams', '$location',
+	function ($scope, $http, $routeParams, $location)
 {
 	// Initialize variables.
 	var events = $scope.events = [];
@@ -21,6 +21,10 @@ nommeryApp.controller('mainController',
 
   var selectedRegion = $scope.selectedRegion = [];
 
+  var showEvents = $scope.showEvents = function showEvents () {
+  	$location.path('/events/create');
+  };
+
 	// Load available events.
 	$http.get('/api/events')
 	.success( function (data) {
@@ -30,4 +34,20 @@ nommeryApp.controller('mainController',
 	.error( function (data) {
 		console.log('Server error: ' + data);
 	});
+}]);
+
+nommeryApp.controller('createController',
+	['$scope', '$http', '$routeParams', '$location',
+	function ($scope, $http, $routeParams, $location)
+{
+	var eventObject = $scope.eventObject = {
+		title: 'Dinner at State Bird Provisions',
+		region: 'San Francisco',
+		neighborhood: 'Western Addition',
+		datetime: Date.now,
+		partyMax: 2,
+	};
+
+
+
 }]);

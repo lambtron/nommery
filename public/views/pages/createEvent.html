@@ -1,0 +1,42 @@
+<div ng-controller="createController">
+	<div class="row">
+		<div class="col-lg-12">
+			<h1>Add your event here.</h1>
+			<hr>
+		</div>
+	</div>
+	<div class="row">
+		<form class="form-group">
+			
+			<div class="form-group col-lg-12">
+				<input type="text" placeholder="{{eventObject.title}}" class="form-control">
+			</div>
+			<div class="form-group col-lg-12">
+				<select ui-select2="region"
+								ng-model="eventObject.region"
+								data-placeholder="{{eventObject.region}}">
+					<option value=""></option>
+					<option ng-repeat="region in regions"
+									value="{{region}}">
+						{{region}}
+					</option>
+				</select>
+				<select ui-select2="neighborhood"
+								ng-model="eventObject.neighborhood"
+								data-placeholder="{{eventObject.neighborhood}}">
+					<option value=""></option>
+					<option ng-repeat="neighborhood in neighborhoods"
+									value="{{neighborhood}}">
+						{{neighborhood}}
+					</option>
+				</select>
+			</div>
+			<div class="form-group col-lg-8">
+				<input type="text" placeholder="{{eventObject.datetime}}" class="form-control">
+			</div>
+			<div class="form-group col-lg-4">
+				<input type="text" placeholder="{{eventObject.partyMax}}" class="form-control">
+			</div>
+		</form>
+	</div>
+</div>
