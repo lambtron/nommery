@@ -41,13 +41,25 @@ nommeryApp.controller('createController',
 	function ($scope, $http, $routeParams, $location)
 {
 	var eventObject = $scope.eventObject = {
-		title: 'Dinner at State Bird Provisions',
+		title: 'State Bird Provisions',
 		region: 'San Francisco',
 		neighborhood: 'Western Addition',
 		datetime: Date.now,
 		partyMax: 2,
 	};
 
-
+	var submitYelp = $scope.submitYelp = function () {
+		var obj = {
+			venueQuery: eventObject.title
+		};
+		console.log(obj);
+		$http.post('/api/yelp', obj)
+		.success( function (data) {
+			console.log(data);
+		})
+		.error( function (data) {
+			console.log('server error: ' + data);
+		});
+	};
 
 }]);

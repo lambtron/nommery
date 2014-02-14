@@ -4,6 +4,7 @@
 
 (function() {
 
+var yelp = require('../app/controllers/yelp');
 var events = [
 		{
 			title: 'Dinner at State Bird Provisions',
@@ -75,6 +76,18 @@ module.exports = function (app) {
 	app.get('/api/events', function (req, res) {
 		// Return events.
 		res.send(events, 200);
+	});
+
+	// Yelp.
+	app.post('/api/yelp', function (req, res) {
+		var venueQuery = req.body.venueQuery;
+		var location = req.body.location;
+		yelp.getRestaurants(venueQuery, location, function (err, data) {
+			if (err)
+				res.send(err, 400);
+			else
+				res.send(data, 200);
+		});
 	});
 
 	// Application route =========================================================
